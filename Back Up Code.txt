@@ -9,7 +9,9 @@ Sub DQAnalysis()
     Cells(3, 3).Value = "Return"
 
     rowStart = 2
-    rowEnd = 3013
+    'DELTE rowEnd = 3013
+    'rowEnd code taken from https://stackoverflow.com/questions/18088729/row-count-where-data-exists
+    rowEnd = Cells(Rows.Count, "A").End(xlUp).Row
     totalVolume = 0
 
     Worksheets("2018").Activate
